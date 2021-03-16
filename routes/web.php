@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeControllers;
+use App\Http\Controllers\JasaSekitar;
+use App\Http\Controllers\VendorSekitar;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// ROUTE FRONTEND
+
+Route::get('/testinghome', [HomeControllers::class,'index']);
+
+// Route::view('/home','home')->middleware('auth');
+
+// require __DIR__ .'/admin.php';
